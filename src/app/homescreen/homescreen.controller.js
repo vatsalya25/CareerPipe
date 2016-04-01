@@ -1,32 +1,20 @@
 export class HomescreenController {
-  constructor ($timeout, webDevTec, toastr) {
+  constructor () {
     'ngInject';
+    this.items = [{name: 'one', age: 30 },{ name: 'two', age: 27 },{ name: 'three', age: 50 }];
+    this.selectedItem = this.items[0];
 
-    this.awesomeThings = [];
-    this.classAnimation = '';
-    this.creationDate = 1457944130746;
-    this.toastr = toastr;
-
-    this.activate($timeout, webDevTec);
-  }
-
-  activate($timeout, webDevTec) {
-    this.getWebDevTec(webDevTec);
-    $timeout(() => {
-      this.classAnimation = 'rubberBand';
-    }, 4000);
-  }
-
-  getWebDevTec(webDevTec) {
-    this.awesomeThings = webDevTec.getTec();
-
-    angular.forEach(this.awesomeThings, (awesomeThing) => {
-      awesomeThing.rank = Math.random();
-    });
-  }
-
-  showToastr() {
-    this.toastr.info('Fork <a href="https://github.com/Swiip/generator-gulp-angular" target="_blank"><b>generator-gulp-angular</b></a>');
-    this.classAnimation = '';
+    this.salesData=[
+        {hour: 1,sales: 54},
+        {hour: 2,sales: 66},
+        {hour: 3,sales: 77},
+        {hour: 4,sales: 70},
+        {hour: 5,sales: 60},
+        {hour: 6,sales: 63},
+        {hour: 7,sales: 55},
+        {hour: 8,sales: 47},
+        {hour: 9,sales: 55},
+        {hour: 10,sales: 30}
+    ];
   }
 }
