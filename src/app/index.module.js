@@ -10,8 +10,8 @@ import { WebDevTecService } from '../app/components/webDevTec/webDevTec.service'
 import { NavbarDirective } from '../app/components/navbar/navbar.directive';
 import { MalarkeyDirective } from '../app/components/malarkey/malarkey.directive';
 import { DropdownDirective } from '../app/components/dropdown/dropdown.directive';
-// import { DlineDirective } from '../app/components/dline/dline.directive';
-var dLine = require('../app/components/dline/dline.directive').DlineDirective;
+import { D3lineDirective } from '../app/components/d3line/d3line.directive';
+// var dLine = require('../app/components/dline/dline.directive').DlineDirective;
 
 angular.module('careerPipe', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngRoute', 'toastr'])
   .constant('malarkey', malarkey)
@@ -26,4 +26,4 @@ angular.module('careerPipe', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngRoute', 't
   .directive('acmeNavbar', NavbarDirective)
   .directive('acmeMalarkey', MalarkeyDirective)
   .directive('dropDown', DropdownDirective)
-  .directive('dLine', dLine);
+  .directive('d3Line', D3lineDirective);

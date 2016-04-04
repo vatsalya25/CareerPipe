@@ -3,10 +3,10 @@
   <div>
     <!-- <drop-down items="[{name: 'Yeoman'}, {name: 'Gulp'}, {name: 'Angular'}]"></drop-down> -->
   </div>
-  Selected item is: {{home.selectedItem.name}}
-  <select ng-model="home.selectedItem" ng-options="item.name for item in home.items"></select>
+  <!-- Selected item is: {{home.selectedItem.name}} -->
+  <!-- <select ng-model="home.selectedItem" ng-options="item.name for item in home.items"></select> -->
 
   <div>
-    <d-line data="home.salesData" width="1200" height="200"></d-line>
+    <d3-line data="home.chartData" width="1200" height="200"></d3-line>
   </div>
 </div>
